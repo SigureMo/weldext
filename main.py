@@ -9,7 +9,6 @@ if __name__ == '__main__':
     if args.action == 'train':
         pass
     elif args.action == 'test':
-        from data_loader import image_handler
         pass
     elif args.action == 'docs':
         from docs import docs_dev

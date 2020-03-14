@@ -16,7 +16,7 @@ class MNISTLoader():
     def get_data_attr(self, data_type, attr):
         return getattr(self, data_type + '_' + attr)
 
-    def batch_loader(self, batch_size=64, data_type='train', flatten=False):
+    def __call__(self, batch_size=64, data_type='train', flatten=False):
         data_size = self.get_data_attr(data_type, 'size')
         data = self.get_data_attr(data_type, 'data')
         if flatten:
@@ -27,16 +27,6 @@ class MNISTLoader():
         batch_permutation_indices = (permutation[i: i + batch_size] for i in range(0, data_size, batch_size))
         for batch_permutation in batch_permutation_indices:
             yield data[batch_permutation], label[batch_permutation]
-
-class ZeroMetric(tf.keras.metrics.Metric):
-    def __init__(self):
-        super().__init__()
-
-    def update_state(self, y_true, y_pred, sample_weight=None):
-        pass
-
-    def result(self):
-        return 0.
 
 
 if __name__ == '__main__':

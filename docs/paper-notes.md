@@ -430,6 +430,134 @@
    - 比如 SVM 寻找焊缝位置
    - 比如 BPNN 预测是否熔透
 
+## TIG 薄板焊接熔孔视觉检测与动态行为研究
+
+- 类型 学位论文（山东大学 硕士学位论文）
+- 年份 2018
+- 第一作者 郭永健
+- 关键词
+   - 熔孔行为
+   - 视觉检测
+   - 图像处理
+   - 熔透表征
+
+---
+
+- 主要侧重 图像处理
+- 模型
+   - 输入 熔孔-间隙图像
+   - 输出 熔孔边缘及对应的参数
+- 主要内容
+   - 环境搭建
+   - 图像处理
+      - 两种并行的图像检测，最后取并集
+         - CLAHE -> Canny
+         - LoG
+      - 形态学处理
+      - 参数提取
+   - 各种分析
+
+## Prediction of weld formation in 5083 aluminum alloy by twin-wire CMT welding based on deep learning
+
+- 中文题目 基于深度学习的双丝CMT焊接对5083铝合金焊缝形成的预测
+- 类型 期刊（Welding in the World）
+- 年份 2018
+- 第一作者 Limeng Yin
+- 关键词
+   - 双线CMT焊接
+   - 5083铝合金
+   - 深度学习
+   - 神经网络
+   - 编队预测
+
+---
+
+- 主要侧重 深度学习（强行，就多了一层（双隐层）………………）
+- 模型
+   - 输入 焊接工艺参数（双线CMT焊接过程的前线脉冲电流和后线CMT电流）（2-dims）
+   - 输出 焊缝尺寸（焊缝熔深，焊缝宽度和焊缝余高）（3-dims）
+   - 结构 2 -> 53 -> 53 -> 3
+   - 训练方式 mini-Batch GD
+   - Loss MSE
+   - 数据量 training 32
+   - 技巧
+      - 输入进行最大最小归一化
+      - Dropout
+      - learning_rate=0.1
+      - batch_size=32
+- 主要内容
+   - 实验环境介绍
+   - 模型介绍
+   - 评估（确实不错啦什么的，还有那隐层神经元数量是试出来的，效果最佳）
+
+## Real‑time monitoring of high‑power disk laser welding statuses based on deep learning framework
+
+- 中文题目 基于深度学习框架的大功率圆盘激光焊接状态的实时监控
+- 类型 期刊（Journal of Intelligent Manufacturing）
+- 年份 2019
+- 第一作者 Yanxi Zhang
+- 关键词
+   - 特征融合
+   - 深度学习
+   - 遗传算法
+   - 堆叠式稀疏自动编码器
+   - 多传感器信号
+
+---
+
+- 主要侧重 网络优化
+- 模型
+   - 输入 从 ROI 提取的特征（351-dims）
+   - 输出 GA
+   - 结构 351 -> 200 -> 10 -> 4
+   - 训练方式 SSAE-GA
+   - 验证方式 五折交叉验证
+- 主要内容
+   - 实验环境搭建（21 组不同参数的实验）
+   - 数据预处理
+      - 提取 ROI
+      - 形态学运算增强
+      - SSAE 描述
+      - GA 描述（居然是用来优化超参数（学习率, momentum 因子, 正则化参数，稀疏因子，控制因子？？））
+      - 与其他算法的对比（BP、SVM、随机森林）
+
+## Simultaneous Monitoring of Penetration Status and Joint Tracking During Laser Keyhole Welding
+
+- 中文题目 激光小孔焊接过程中同时监测穿透状态和接头跟踪
+- 类型 会议论文（IEEE）
+- 年份 2019
+- 第一作者 Yi Zhang
+- 关键词
+   - 强光干扰
+   - 接头跟踪
+   - 激光焊接监控
+   - 穿透状态
+   - 同时监控
+
+---
+
+- 主要侧重 实验环境相关
+- 主要内容 看得好懵
+
+## The Application of Deep Learning and Image Processing Technology in Laser Positioning
+
+- 中文题目 深度学习和图像处理技术在激光定位中的应用
+- 类型 期刊（Applied Sciences）
+- 年份 2018
+- 第一作者 Chern-Sheng Lin
+- 关键词
+   - 机器视觉
+   - 激光点
+   - 深度学习
+   - 卷积神经网络
+
+---
+
+- 主要侧重 不资道呀~
+- 主要内容
+   - 介绍模版匹配（不变矩）
+   - 介绍 CNN（Conv、Pooling、FC 啦）
+   - 看得也是很懵很懵的
 
 ## 基于神经网络的铝合金焊缝成型的预测研究
 
@@ -453,5 +581,16 @@
    - 输出 焊缝横截面尺寸 （4-dims）
    - 结构 8 -> ????????? -> 4
    - 数据量 30 组（留一法测试）
-   - 训练方法 BP-GA / SSAE（BP）
+   - 训练方法 BP-GA / SSAE-GA
    - Loss 未定
+
+---
+
+- BP-GA
+   - GA 用于初始化参数
+   - BP 用于进一步调优
+- SSAE-GA
+   - SSAE 用于训练参数（仍然基于 BP）
+   - GA 用于选择超参数
+
+关于 SSAE-GA，这真是一个大工程啊，首先 SSAE 要 Pre-train 好几次 + Fine Tuning，然后如果 GA 的指标用 TestSet 的话，留一法就是要重复前面步骤 n=30 次，再之后 GA 为了达到指标……嗯，我们还要来个大循环………………

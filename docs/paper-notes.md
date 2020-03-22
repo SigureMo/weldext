@@ -518,7 +518,7 @@
       - 提取 ROI
       - 形态学运算增强
       - SSAE 描述
-      - GA 描述（居然是用来优化超参数（学习率, momentum 因子, 正则化参数，稀疏因子，控制因子？？））
+      - GA 描述（居然是用来超参数搜索（学习率, momentum 因子, 正则化参数，稀疏因子，控制因子？？））
       - 与其他算法的对比（BP、SVM、随机森林）
 
 ## Simultaneous Monitoring of Penetration Status and Joint Tracking During Laser Keyhole Welding
@@ -558,6 +558,79 @@
    - 介绍模版匹配（不变矩）
    - 介绍 CNN（Conv、Pooling、FC 啦）
    - 看得也是很懵很懵的
+
+## Investigation of training performance of convolutional neural networks evolved by genetic algorithms using an activity function
+
+- 中文题目 使用激活函数的遗传算法进化的卷积神经网络训练性能研究
+- 类型 期刊（Artifcial Life and Robotics）
+- 年份 2019
+- 第一作者 Job Isaac Betere
+- 关键词
+   - 卷积神经网络训练
+   - 遗传算法
+   - 激活函数
+   - 图像识别
+   - 人工智能系统
+
+---
+
+主要叙述了利用 GA 对 CNN 进行优化，得出了使用 GA 优化 CNN 的结论，另外，探讨了各种激活函数对最终性能的影响
+
+由于 Sigmoid 函数在使用 BP 优化深度 NN 时会产生 vanishing gradient 的问题，但是 GA 本身并不存在该问题，故我们在使用 GA 的时候可以尝试 Sigmoid 激活函数，同时也对 ReLU、Leaky ReLU、L&exp（可看作 ReLU 与 Sigmoid 的一种结合）
+
+文中实验结果表明 BP 容易产生振荡，而 GA 并无该问题，且效果更好一些，另外，Sigmoid 虽然在 BP 下效果很差，但在 GA 下仍然可以使用
+
+## Optimal design for dual laser beam butt welding process parameter using artificial neural networks and genetic algorithm for SUS316L austenitic stainless steel
+
+- 中文题目 基于人工神经网络和遗传算法的SUS316L奥氏体不锈钢双激光对接焊接工艺参数的优化设计
+- 类型 期刊（Optics and Laser Technology）
+- 年份 2019
+- 第一作者 Bowen Liu
+- 关键词
+   - 双激光束焊接
+   - BP 神经网络
+   - 人工神经网络
+   - GA
+   - 奥氏体不锈钢
+   - 优化设计
+
+---
+
+- 主要侧重
+- 模型
+   - 输入 激光功率，焊接速度，焦点位置和光束间距（4-dims）
+   - 输出 气孔数，气孔的平均面积和焊缝宽度（3-dims）
+   - Loss MSE
+- 主要内容
+   - 叙述下 BPNN 是啥
+   - 叙述下 GA 是啥
+   - 然后突然得到最佳的参数（输入值），并以该参数进行实验，的确获得了比较好的效果
+
+不知道是我没读懂还是 paper 本身的问题，这里是如何结合 GA 和 BPNN 的呢？是像 BP-GA 方法一样 GA 用作初始化参数呢？还是仅用 BP 优化参数，之后使用 GA 搜索最优的输入值呢？（我倾向于后者，因为输入值的搜索必定需要算法完成，文中并没有提到相关算法，但是文中又明确提到使用 GA 优化模型，所以又貌似不是后者？），文中只将 GA 和 BPNN 算法本身描述一遍，而未提起如何应用它们（特别是 GA），反正细节是没懂没懂啦……
+
+## Research on laser processing technology of instrument panel implicit weakening line based on neural network and genetic algorithm
+
+- 中文标题 基于神经网络和遗传算法的仪表板隐性弱化线激光加工技术研究
+- 类型 期刊（Optik）
+- 年份 2019
+- 第一作者 Hua Ding
+- 关键词
+   - 激光技术
+   - 激光减弱
+   - BP 神经网络
+   - 遗传算法
+
+---
+
+- 主要侧重 算法分析
+- 模型
+   - 输入 脉冲宽度，散焦量和处理速度（3-dims）
+   - 输出 残余厚度（1-dim）
+   - 结构 单隐层 分别使用 sigmoid linear 激活
+- 主要内容
+   - 分析参数的相关性
+   - 使用 BP 训练并测试
+   - 进一步结合 GA （这里称为 GA-BP，其实和之前了解的 BP-GA 算法一样，都是先 GA 初始化再 BP 优化）训练并测试，不仅收敛快还效果好
 
 ## 基于神经网络的铝合金焊缝成型的预测研究
 

@@ -632,6 +632,29 @@
    - 使用 BP 训练并测试
    - 进一步结合 GA （这里称为 GA-BP，其实和之前了解的 BP-GA 算法一样，都是先 GA 初始化再 BP 优化）训练并测试，不仅收敛快还效果好
 
+## Why Does Unsupervised Pre-training Help Deep Learning?
+
+- 中文题目 为什么无监督预训练能够帮助深度学习？
+- 类型 期刊（Journal of Machine Learning Research）
+- 年份 2010
+- 第一作者 Dumitru Erhan
+- 关键词
+   - 深度架构
+   - 无监督预训练
+   - 深度信念网络
+   - 堆叠式去噪自编码器
+   - 非凸优化
+
+---
+
+- 文中认为无监督预训练有着一定的正则化效果
+- 生成模型比判别模型更不容易过拟合
+- 所有成功的方法的共同点：Unsupervised PreTraining + Fine Tuning，举例
+   - DBF
+   - SDAE
+- 随机梯度下降的**早期行为会造成很大的影响**，这可能会导致后期无论多少次迭代都无法跳出某一个局部最小
+- 不经过预训练的模型明显会有较大的方差
+
 ## 基于神经网络的铝合金焊缝成型的预测研究
 
 - 类型 论文:joy:

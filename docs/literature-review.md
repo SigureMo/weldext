@@ -36,23 +36,29 @@
 
 ### 1.2.2 神经网络面临的难点
 
-BP 优化算法虽然能够非常有效地降低网络的误差，但由于 BP 优化只是一种局部搜索算法，在训练的过程中非常容易陷入局部最优的位置，导致进一步优化困难等等的问题。为了解决该问题，常用的解决方案主要有正则化（regularization）和 early stopping。
+正由于神经网络具有强大的表示能力，神经网络经常遭遇过拟合问题。为了解决该问题，需要使用正则化（regularization）或 Early Stopping 等方案。
 
-主要问题 local minima，非凸优化
+在网络训练初期，训练误差与验证误差往往是同时下降的，此时网络学到了比较泛化的表示。随着训练迭代次数的增加，网络可能会将训练集中独有的特征当作所有潜在样本所具有的一般特征，这将会导致网络泛化能力下降，这便是过拟合现象。这在误差上表现为训练误差仍在下降而验证误差不下降或反而上升。为了使得模型学习到最泛化的表示，可以在刚刚发生过拟合时停止网络的训练，这便是 Early Stopping。
 
-1. 梯度下降法（局部搜索）
-2. 更多优化算法 遗传（兼顾全局和局部搜索）、模拟退火（局部搜索）
-3. 无监督预训练的作用 为什么无监督预训练，
+另外，网络能够过拟合的主要原因是网络具有极高的拟合能力，如果能够限制网络的拟合能力，那么网络将会更倾向于学习泛化的表示。这种方式称为正则化。
+
+BP 优化算法虽然能够非常有效地降低网络的误差，但由于 BP 优化只是一种局部搜索算法，在训练的过程中非常容易陷入局部最优的位置，导致进一步优化困难等等的问题。为了跳出局部极小，人们常采用遗传算法（genetic algorithms, GA）、模拟退火（simulated annealing, SA）算法来逼近全局最优。此外，还有一些在 BP 优化的基础上进行优化的算法，比如随机梯度下降（Stochastic gradient descent, SGD）、Momentum 优化等方法。这些方法都在一定程度上使得网络获得更好的性能，但由于这些技术大多都是启发式算法，理论上尚缺乏保障。
+
+（这章可以水一个全局最小局部最小的图）
 
 ### 1.2.3 卷积神经网络
 
-得益于近年来计算机网络技术的发展，大数据共享已经成为了可能。而神经网络需要大量的数据
+卷积神经网络（Convolutional Neural Network, CNN）与经典神经网络类似，它参考了生物视觉神经元的结构，能够很好地处理视觉相关问题。
+
+1980 年，Kunihiko Fukishima 提出的 Neocognitron[7] 创造性地从人类视觉系统引入了许多新的思想到人工神经网络，被广泛认为是 CNN 的雏形。1990 年，LeCun 将反向传播应用到了类似 Neocoginitro 的网络上来做监督学习[8]。LeCun 的网络结构中引入了权值共享的概念，空间上不同位置的神经元使用同一个卷积核进行卷积。权值共享大大地减少了参数量，也就降低了过拟合的风险，提高了模型的泛化能力，另外也使得训练的速度大大提升。1998 年，LeCun 提出的 LeNet-5[9] 技压群雄，轻松超过其它主流的机器学习算法。但由于当年计算能力的限制和后来 SVM 的大放异彩，CNN 在 21 世纪初迷失了近十年。
+
+随着计算机硬件的快速发展，硬件的计算能力不断提升，神经网络的训练逐渐成为了可能。2006 年，研究人员成功利用 GPU 加速了 CNN，相比 CPU 实现快了近四倍。2012 年，AlexNet[10] 在 ImageNet 大规模识别挑战赛（ImageNet Large Scale Visual Recognition Competition，ILSVRC）图片分类任务上以 15.3% 的 Top-5 错误率登顶，远高于第二名的 26.2%。AlexNet 基本结构参考了 LeNet-5，同时为了防止梯度弥散（vashing gradient）等问题使用了 ReLU 激活函数[11]。AlexNet 使得 CNN 再度被人们所重视，也标志着神经网络的复苏与深度学习的崛起。
+
+随后几年，CNN 迎来了快速发展的浪潮，新的网络结构层出不穷，效果也在不断提升。2014 年，google 提出的 GoogleNet[12] 和 Visual Geometry Group 提出的 Vgg[13] 分别在 ILSVRC2014 位列第一和第二。后者在 AlexNet 的基础上进一步提高网络深度，前者则在网络结构上另辟蹊径，不仅能够提高网络深度，而且大大减少网络参数量。2015 年，何恺明提出的 ResNet 利用残差结构使得网络能在不退化的前提下提升到 152 层[14]，一举摘得 ILSVRC2015 桂冠。此后几年，google 在 GoogLeNet 提出的 Inception 结构和何恺明提出的 ResNet 成为了 CNN 两个主要发展的方向。google 在 Inception 结构的基础上提出了 InceptionV2、InceptionV3、Xception、InceptionV4、Inception-ResNet、Inception-ResNetV2 结构，不断提升网络的性能，后两者融合了 ResNet 的残差结构，使得网络性能进一步提升。何恺明也相继提出了 ResNetV2、ResNeXt，后者也在结构中借鉴了 Inception 结构。2017 年，GaoHuang 提出的 DenseNet 结构建立了比 ResNet 更加密集的连接，并提出了特征重用的概念，不仅能够解决梯度弥散等问题，还进一步减少了参数量[15]。同年，Jie Hu 提出的 SE-Net 利用通道注意力机制进一步优化 ResNeXt 结构[16]，一举夺得 ILSVRC2017 同时也是最后一届 ILSVRC 的桂冠。
+
+（这里看情况水一下 CNN 结构，多图警告）卷积神经网络的基本结构主要包含卷积层与池化层，其中卷积层
 
 网络的层数越多时，网络各层之间的分工愈发的明确，这使得
-
-详谈深度学习
-
-详谈 CNN
 
 ## 1.3 熔池图像处理技术研究现状
 
@@ -99,6 +105,16 @@ SSAE-GA
 4. 孟宪伟. 焊接智能化的研究现状及应用
 5. 周志华. 机器学习
 6. [WikiPedia 人工神经网络](https://zh.wikipedia.org/zh-hans/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+7. Fukushima. Neocognitron
+8. LeCun. Handwritten digit recognition with a back-propagation network
+9. LeCun. Gradient-Based Learning Applied to Document Recognition
+10. ImageNet Classification with Deep Convolutional Neural Networks
+11. ReLU 的论文
+12. GoogLeNet 的论文
+13. vgg 的论文
+14. ResNet
+15. DenseNet
+16. SE-Net
 
 
 

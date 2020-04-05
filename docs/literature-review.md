@@ -44,6 +44,8 @@
 
 BP 优化算法虽然能够非常有效地降低网络的误差，但由于 BP 优化只是一种局部搜索算法，在训练的过程中非常容易陷入局部最优的位置，导致进一步优化困难等等的问题。为了跳出局部极小，人们常采用遗传算法（genetic algorithms, GA）、模拟退火（simulated annealing, SA）算法来逼近全局最优。此外，还有一些在 BP 优化的基础上进行优化的算法，比如随机梯度下降（Stochastic gradient descent, SGD）、Momentum 优化等方法。这些方法都在一定程度上使得网络获得更好的性能，但由于这些技术大多都是启发式算法，理论上尚缺乏保障。
 
+无监督预训练算法也可以显著提高 BP 神经网络的效果。在深度学习崛起前夕，网络通常使用 Sigmoid 激活，深层网络很容易发生梯度弥散现象，导致无法直接训练。在这种环境下，有两个深度模型都取得了不错的效果，一个是深度信念网络（deep belief network，DBN），一个是堆叠自编码器（stacked auto encoder）。两者有着相似的结构与训练方式，前者是由多个受限玻尔兹曼机（Restricted Boltzmann Machine，RBM）相互堆叠后添加一个分类器而成，后者是由多个自编码器（auto encoder，AE）堆叠而成，它们的训练方式都是先进行逐层无监督预训练（pre-training），后使用有监督的微调（fine-tuning）。这种训练方式的有效性主要来源于无监督预训练可以降低网络的方差，起到了一定的正则化效果。另一方面，随机梯度下降的网络训练的早期行为会造成很大的影响，这可能导致后期无论多少次迭代都无法跳出某一个局部最小，而无监督预训练能够将网络参数初始化在一个较好的位置，使其更加接近全局最优[46]。但后期随着 ReLU 激活[11]、dropout 正则化技术逐渐成为深度学习的主流，逐层预训练技术已经逐渐淡出人们的视线。但该方法确实可以在一定程度上提高模型的精度，而且在拥有大量无标签数据与少量有标签数据的情况下，该方法是更为合适的选择，这种训练方式也被称为半监督学习（Semi-supervised learning）。
+
 （这章可以水一个全局最小局部最小的图）
 
 ### 1.2.3 卷积神经网络
@@ -94,24 +96,35 @@ BP 优化算法虽然能够非常有效地降低网络的误差，但由于 BP �
 
 ## 1.4 焊接过程预测技术研究现状
 
-### 1.4.1 焊接过程预测研究
+由于焊接过程涉及多种复杂因素，很难人工推导出对焊接结果的预测公式，因此常需要机器学习技术对已有数据进行拟合，获得较为准确的预测模型。机器学习是人工智能的一个分支，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。常用的机器学习算法有决策树（decision tree）、支持向量机、神经网络、k 近邻（k-nearest neighbor，k-NN）算法等。
 
-### 1.4.2 神经网络在焊接过程预测的应用现状
+### 1.4.1 神经网络在焊接过程预测的应用现状
 
-BP-GA 遗传初始化 + BP
-SSAE-GA 无监督预训练 + BP + 遗传超参数搜索
+神经网络是一种非常有效的机器学习算法，它拥有非常强大的学习能力，可以轻松从数据集中发现潜在规律，将神经网络应用于焊接领域中的焊接工艺参数选择与优化、焊缝跟踪、焊接缺陷预测、力学性能预测等都具有比较理想的效果[37]。
 
-它们在根本上都是先预训练找到一个比较好的参数位置
+传统的 BP 神经网络在焊接预测中已经有着广泛的应用，均取得了不错的效果。张抱日等人利用 BP 神经网络建立了焊接高度与电弧电压的对应关系模型，并进一步实现了焊接高度的自动控制[39]。赵成涛建立了基于 BP 神经网络的镁合金焊缝成形预测模型，利用神经网络的映射能力和分析能力，采用焊接过程的焊接电流、焊接电压、焊接速度、焊丝干伸长作为预测输入，把焊缝成形中的焊缝熔深、熔宽、余高作为信息输出对神经网络进行训练，从而建立基于 BP 神经网络的焊接参数和焊缝成形的映射模型[38]。黄军芬等人利用 BP 神经网络建立了熔池形貌与背面熔宽的模型，对熔透情况进行了预测[40]。Limeng Yin 等人利用双隐层神经网络对焊缝尺寸进行了预测，在网络的设计细节中使用了较新的深度学习技术，取得了较高的预测精度[44]。
 
-Johannes Gunther 等人先利用堆叠式降噪自编码器
+虽然传统的 BP 神经网络已经能够取得不错的效果，但由于其本质是一种局部搜索方法，很容易陷入局部最优，使得网络泛化能力下降。遗传算法起源于对生物系统所进行的计算机模拟研究。它是模仿自然界生物进化机制发展起来的随机全局搜索和优化方法，借鉴了达尔文的进化论和孟德尔的遗传学说。其本质是一种高效、并行、全局搜索的方法，能在搜索过程中自动获取和积累有关搜索空间的知识，并自适应地控制搜索过程以求得最佳解。Bowen Liu 搭建神经网络来拟合焊接参数与焊接缺陷的映射关系，并使用遗传算法进行优化，并进一步搜索焊接缺陷最低时对应的焊接参数，最终焊接成品有着较好的质量[41]。
+
+遗传算法不仅可以独立使用，还可以结合 BP 算法进一步提高模型的精度，其方法是首先利用遗传算法优化神经网络参数达到一个较优的效果，然后以此为 BP 优化的起点，使用梯度下降法进一步训练以降低误差。该方法被称为 BP-GA 方法，它结合了 GA 和 BP 的优点，首先在全局范围内为 BP 设置了一个比较好的起点，使得之后的 BP 优化能够更加接近全局最优。张喆等人利用 BP-GA 的方法拟合了焊接前进方向温度预测模型和前进侧方向温度预测模型，其预测能力要优于基于传统 BP 神经网络所建立的模型[42]。刘立鹏等人利用 BP-GA 算法对焊接接头力学性能进行预测，达到了预期的精度要求[43]。Hua Ding 等人利用 BP-GA 算法对焊接残余厚度进行了预测，使得网络的预测精度更加准确，收敛速度大大提高[45]。
+
+此外，无监督预训练也能够显著提高神经网络的性能。稀疏自编码器（sparse auto encoder，SAE）是自编码器的一种变体，它对参数添加了一个惩罚项，使得被激活的神经元限制数量限制在一个较低的值，换言之，网络会学习到较为稀疏的表示，而稀疏的表示能够在编码时更加有效地对数据进行降维。堆叠稀疏自编码器（stacked sparse auto encoder，SSAE）是由稀疏自编码器堆叠而成的，它相比于堆叠自编码器拥有更好的降维效果，可以学习到更有用的特征。Yanxi Zhang 等人利用 SSAE 对焊接状态进行预测，之后使用 GA 进行超参数搜索，取得了一定的效果，并将该方法称为 SSAE-GA 方法[47]。
+
+与 SAE 相似，还有一种相似的自编码器被称为降噪自编码器（denoising auto encoder），堆叠后的结构即 SDAE，SDAE 能够从包含噪声的数据中还原数据，因此有着更强的鲁棒性。Johannes Gunther 等人在图像特征提取过程中使用了 SDAE，并使用提取出的特征进行了 SVM 分类测试，仅产生了较低的分类误差。这些提取出的特征用于后续焊接控制神经网络的输入，取得了较好的控制效果[48]。
+
+### 1.4.2 其它机器学习算法在焊接过程预测的应用现状
+
+支持向量机可以在高维空间中构造超平面以最大程度地将两类数据分离，支持向量机会最大化两类数据相对于这个超平面之间的距离，这个距离被称为间隔（margin），因此这种线性分类器也常被成为最大间隔分类器[33]。然而这种线性分类器无法对非线性数据进行划分，所以需要在其基础上应用一个核函数，使 SVM 具有非线性分类的能力。由于 SVM 相比于 logitic 回归拥有更加简单的数学表示形式，所以 SVM 在小型的分类任务上往往会有着更好的效果和训练速度。顾盛勇在焊缝视觉检测系统中使用了 SVM 预测焊缝位置，并利用 PCA 算法进行优化[34]。贺峰等人基于多传感器和 SVM 对焊接过程进行模式识别，有效地提高了焊接过程准确率[35]。
+
+随机森林算法也是一种机器学习任务中的常用方法。随机森林算法是一个包含多个决策树的分类器，并且其输出的类别是由个别树输出的类别的众数而定。它对多种数据都能较好地进行分类，但是在类别特别多时它的表现并不会太好。Zhifen Zhang 等人首先使用 PCA 算法对数据进行降维处理，之后使用 RF 进行分类，有效地对焊缝缺陷种类进行预测[36]。Haixing Zhu 等人首先利用 CNN 对熔池图片进行降维，之后使用 RF 进行了有效的分类[32]。
 
 ## 1.5 本文研究的主要内容
 
-前处理 卷积网络或直接
+常见的焊缝预测方法通常仅使用焊接工艺参数作为预测模型的输入特征，鉴于熔池图像包含丰富的焊接过程相关信息，本文将熔池形貌特征与焊接工艺参数一起作为输入特征输入到预测模型中，进一步提高预测的精度。
 
-利用 BP-GA
+熔池图像主要使用 CCD 相机进行采集，之后使用滤波等方式对图像进行降噪与增强处理。由于图像原始特征（像素点）数量过多，直接输入到后续预测模型会使得焊接工艺参数输入项被湮没掉，因此需要从熔池图像中提取出有用的特征作为预测模型的输入。熔池的形貌是熔池图片的主要特征，因此可以利用边缘提取算法获取熔池轮廓，进一步测量得到熔池的各种形状参数。另外，由于卷积神经网络在图片特征提取上有着较好的效果，可以利用卷积神经网络拟合出熔池形貌预测模型，将该模型提取出来的特征作为后续预测模型的输入。
 
-SSAE-GA
+焊缝形状的预测使用神经网络模型，训练方式会采取 BP 优化方法，此外会尝试使用 BP-GA 以及 SSAE-GA 方式以进一步提升模型的精度。
 
 # Refs
 
@@ -142,6 +155,19 @@ SSAE-GA
 30. Krizhevsky A，Sutskever I，Hinton GE． ImageNet classification with deep convolutional neural networks［C］． Advances in Neural Information Processing Systems，Curran Associates ＲedHook，NY，USA ，2012: 1097 － 1105．
 31. 覃科. 基于卷积神经网络的CO2 焊接熔池图像状态识别方法
 32. Haixing Zhu. Deep Learning-Based Classification of Weld Surface Defects
-
-
-?. Johannes Gunther. Intelligent Laser Welding through Representation, Prediction, and Control Learning: An Architecture with Deep Neural Networks and Reinforcement Learning
+33. 统计学习方法. 李航
+34. 顾盛勇. 基于视觉传感的高效深熔锁孔TIG焊焊缝识别及熔透状态的研究
+35. 贺峰. 基于多传感器和支持向量机的 GMAW 焊接过程模式识别研究
+36. Zhifen Zhang. Real-time seam defect identification for Al alloys in robotic arc welding using optical spectroscopy and integrating learning
+37. 裴浩东．人工神经网络及其在焊接中的应用
+38. 赵成涛. 基于 BP 神经网络的镁合金焊缝成形预测
+39. 张抱日. 基于焊缝熔透检测的机器人深熔 K-TIG 焊接系统
+40. 黄军芬. 基于视觉传感的 GMAW 熔透状态预测
+41. Bowen Liu. Optimal design for dual laser beam butt welding process parameter using artificial neural networks and genetic algorithm for SUS316L austenitic stainless steel
+42. 张喆. 基于遗传 BP 神经网络的搅拌摩擦焊温度模型
+43. 刘立鹏. 基于遗传神经网络的焊接接头力学性能预测系统
+44. Limeng Yin. Prediction of weld formation in 5083 aluminum alloy by twin-wire CMT welding based on deep learning
+45. Hua Ding. Research on laser processing technology of instrument panel implicit weakening line based on neural network and genetic algorithm
+46. Dumitru Erhan. Why Does Unsupervised Pre-training Help Deep Learning?
+47. Yanxi Zhang. Real‑time monitoring of high‑power disk laser welding statuses based on deep learning framework
+48. Johannes Gunther. Intelligent Laser Welding through Representation, Prediction, and Control Learning: An Architecture with Deep Neural Networks and Reinforcement Learning

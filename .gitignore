@@ -132,16 +132,3 @@ draft/
 .ipynb_checkpoints
 .idea
 .DS_Store
-
-# data
-/data/
-
-# test
-/tests/
-test.py
-
-# Cython
-/board.c
-/board.html
-/mcts.c
-/mcts.html

@@ -9,9 +9,8 @@ host = 'localhost'
 
 
 def docs_dev():
-    shell = os.name == "nt"
     p = subprocess.Popen(["python", "-m", "http.server",
-                          str(port)], shell=shell, cwd=docs_dir)
+                          str(port)], shell=False, cwd=docs_dir)
     webbrowser.open(f'http://{host}:{port}')
     while True:
         try:

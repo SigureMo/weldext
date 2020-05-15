@@ -14,11 +14,20 @@
   <script>
     window.$docsify = {
       loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
       subMaxLevel: 2,
       name: "Weldext",
       repo: "https://github.com/cattidea/weldext",
       themeColor: '#006060',
       search: 'auto',
+      count:{
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90, 90, 90)',
+        language: 'chinese'
+      }
     }
   </script>
   <script>
@@ -31,5 +40,6 @@
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <script src="//unpkg.com/docsify-copy-code"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </body>
 </html>

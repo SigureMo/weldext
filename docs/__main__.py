@@ -1,4 +1,3 @@
-import os
 import subprocess
 import time
 import webbrowser
@@ -18,3 +17,6 @@ def docs_dev():
         except KeyboardInterrupt:
             p.terminate()
             break
+
+if __name__ == '__main__':
+    docs_dev()

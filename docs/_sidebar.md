@@ -1,4 +1,4 @@
-* [Complain](view/complain)
+* [Preface](view/complain)
 * [Assignment](view/assignment)
 * [Translation](view/English-paper-translation)
 * [Notes](view/paper-notes)

@@ -10,7 +10,7 @@
    <a href="https://unpkg.com/docsify/themes/vue.css" target="_blank"><img alt="vue" src="https://img.shields.io/badge/theme-vue-4fc08d?style=flat-square&logo=vue.js"></a>
    <br/>
    <a href="LICENSE"><img alt="LICENSE" src="https://img.shields.io/badge/License-MIT-orange?style=flat-square"></a>
-   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC4.0 BY-SA" src="https://img.shields.io/static/v1?label=CC4.0&message=BY-NC-SA&color=yellow&style=flat-square"></a>
+   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC4.0 BY-NC-SA" src="https://img.shields.io/static/v1?label=CC4.0&message=BY-NC-SA&color=yellow&style=flat-square"></a>
 </p>
 
 一次令人“愉悦”的本科毕设经历

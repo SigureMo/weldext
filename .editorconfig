@@ -17,10 +17,6 @@ indent_size = 4
 [*.pyx]
 indent_size = 4
 
-[*.m]
-indent_size = 4
-charset = gbk
-
 [*.sh]
 indent_size = 4
 

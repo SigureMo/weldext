@@ -2,6 +2,16 @@
 
 ## 摘要
 
+由于焊接过程是一个广泛使用但却极为复杂的工业过程，本文通过了解国内外神经网络在各个焊接过程中的应用情况，结合当前神经网络在机器学习以及深度学习中的发展情况，对现阶段神经网络在焊接中的研究及应用状况进行分析，并提出神经网络在焊接过程中的新的应用方向与发展方向。本文对焊接过程中各种可采集到的传感信息进行分析，并发掘可以利用神经网络的过程。鉴于焊接过程充满各种干扰信号，使得传感信号的采集受到极大的干扰，而神经网络有着极强的鲁棒性，能够接受在一定范围内的干扰因素，因此大多数过程利用神经网络进行预测或者控制会是更好的选择。当前国内外已经有很多研究利用神经网络对焊接结构以及性能进行预测，都取得了不错的效果，但大多数使用的方式都是浅层的神经网络，少有使用深层神经网络对焊接过程进行预测，而近年来卷积神经网络已经在深度学习中取得了重大突破，在某些特定任务上甚至超过了人类的水平，因此使用卷积神经网络等深层神经网络对环境信息进行提取是焊接预测的一个发展趋势。现阶段焊接的动力控制大多采用的是 PID 控制器，鲜有强化学习的应用，而强化学习也是近年来机器学习研究的一个热点方向，它非常适合与环境交互时不断进行学习，常用在机器人控制训练等连续决策任务中，因此强化学习在焊接领域的应用也将会是焊接控制的一个发展的必然趋势。
+
+关键词：机器学习 焊接控制 神经网络 强化学习
+
+## Abstract
+
+Welding process is a widely used but complex industrial process. In this work, I understand the current situation of neural networks in various welding processes at home and abroad, combined with the current development of neural networks in machine learning and deep learning. The research and application status of the network in welding is analyzed, and the new application direction and development direction of the neural network in the welding process are proposed. This paper analyzes the various sensory information that can be collected during the welding process, and explores the process that can use neural networks. In view of the fact that the welding process is full of various interference signals, the collection of sensor signals is greatly disturbed, and the neural network is extremely robust and can accept interference factors within a certain range, so most processes are performed using neural networks Forecasting or controlling would be a better choice. At present, there are many studies at home and abroad that use neural networks to predict the welding structure and performance, and have achieved good results, but most of the methods used are shallow neural networks, and few use deep neural networks to predict the welding process. In recent years, convolutional neural networks have made major breakthroughs in deep learning, and even exceeded the level of humans in certain specific tasks. Therefore, the use of deep neural networks such as convolutional neural networks to extract environmental information is welding prediction. A development trend. At present, most of the power control of welding uses PID controllers, and there are few applications of reinforcement learning. Reinforcement learning is also a hot spot in machine learning research in recent years. It is very suitable for continuous learning when interacting with the environment. It is commonly used in robot control. In continuous decision-making tasks such as training, the application of reinforcement learning in the field of welding will also be an inevitable trend in the development of welding control.
+
+Keyword: Machine Learning, Welding Control, Neural Networks, Reinforcement Learning,
+
 ## 1 引言
 
 焊接是一种以加热或加压方式对材料进行接合的工艺及技术。其操作要求严苛，对操作人员有着较高的熟练要求，且工作环境恶劣，操作人员常常处于高危且有毒的环境中，存在着很多的潜在危险[1]。而焊接机器人的应用能大大改善上述问题。它能够提供稳定且均一的焊缝，使得焊缝质量更有保障[2]。同时也大大改善了工业机械操作人员的生活和劳动条件，操作人员只需要方便地装卸工件，就已经可以有效避免操作中接触一些有毒的化学气体和弧光等有害元素。另外，由于焊接机器人可以二十四小时连续生产，因此它的生产效率更高。由此可见，智能化与自动化的生产已经逐渐成为了现代机械焊接加工技术进步与发展的必然趋势。
@@ -200,7 +210,7 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 另一方面，如果通过焊接后测量的焊缝尺寸参数来预测焊缝性能虽然无法直接对焊接参数进行调整，但它可以作为一个预测模块来使用，在前驱预测模块通过焊接工艺参数预测得到焊接接头结构时，进一步通过该模块获得焊接性能，以辅助更加精确地反向参数调控。同时，这也对焊接性能研究起到了重要的作用。阮德重等人考虑到时效强化后焊接接头的抗拉强度与焊缝的形状密切相关[57]，尝试通过焊缝形状参数来预测和控制接头的力学性能，使用了 RBF 神经网络对接头焊缝形状与其对应的焊接接头的抗拉强度等参数进行预测，精度大幅提高[58]。
 
-### 3.4 神经网络在焊接工艺控制中的应用现状
+### 3.4 神经网络在焊接过程控制中的应用现状
 
 焊接的工艺控制目标是获得较好的焊缝质量，一方面可以通过焊接接头的力学性能能够直接反映焊缝质量，另一方面可以通过焊缝的尺寸来间接反映焊缝质量，而这两者我们可以通过焊缝结构分析与焊缝性能预测获得。因此，一种简单的控制方式就是，在焊接机器人的工作过程中引入实时地预测焊接质量，并搜索到最佳质量所对应的焊接参数，并进行焊接。这一方面已经有很多相关研究，而且前面所述的结构分析与性能预测算法也可以直接应用。张抱日等人利用 BP 神经网络建立了焊接高度与电弧电压的对应关系模型，并进一步实现了焊接高度的自动控制[19]。
 
@@ -238,11 +248,43 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 
 ## 4 神经网络在焊接领域应用研究的发展趋势
 
-<!-- 趋势嘛，就是深度学习 + 强化学习 -->
+随着人工智能技术的不断发展，焊接领域的智能化与自动化也逐渐加深。但由于大多数较为先进的技术均为近些年刚刚提出，在焊接领域中应用尚不广泛，因此焊接领域中所使用的控制与预测技术大多滞后于前沿的人工智能研究。因此，未来焊接领域将会结合较新的智能化技术，以达到更高的智能化水准，实现焊接的高度自动化。
 
-### 4.1
-### 4.2
+<!-- ### 4.1 神经网络在焊接预测的发展趋势 -->
+
+这几年的人工智能研究大多聚焦于深度学习，而深度学习的核心就是神经网络。虽然近年来神经网络在焊接的预测与控制中已经得到了较为广泛的应用，但大多数的应用仅限于较为简单的任务，只需要浅层神经网络即可完成。而在复杂的控制过程大多使用的是一些传统的算法，少有利用深层神经网络的相关研究。近年来深度学习的发展使得神经网络的拟合能力大大提高，很多大型复杂任务可以通过神经网络端到端解决，因此在一些复杂任务上运用深层神经网络是焊接领域的发展趋势。
+
+<!-- 焊缝跟踪写点 -->
+
+<!-- ### 4.2 强化学习在焊接控制中的发展趋势 -->
+
+强化学习可以很好地对焊接过程进行辅助调控，与 PID 控制器配合使用可以显著提高焊接控制的稳定性。另一方面，强化学习随着深度学习的兴起也开始逐渐走向深度化，性能远高于过去，所以可以将更多的控制任务交给强化学习中的神经网络来完成，减少 PID 控制器的任务，进而提高焊接控制过程的鲁棒性。
+
+<!-- 大数据能不能说点 -->
+
 ## 结论
+
+近年来随着深度学习的发展，神经网络作为一种热门的模型在各种行业中被广泛应用。神经网络相比于其它机器学习算法有着更强的非线性拟合能力，而且可以通过多层叠加以达到更高的性能，这使得深度学习中出现一些新的模型，比如卷积神经网络、循环神经网络等等。卷积神经网络已经广泛应用于计算机视觉领域，并且在分类与识别任务上已经超过了人类的水平。另外，强化学习也在与深度学习不断交融与发展，近年来很多任务使用从零开始的强化学习方法已经能够超过一些监督学习方法，而且强化学习在适用性上远高于监督学习，这使得强化学习相关技术也在近年来飞速发展。
+
+焊接过程是一个高度复杂的过程，从焊接工艺参数到熔池的形成，再到焊接接头形成特定的尺寸，最后到焊接接头呈现不同的力学性能，包含了多种复杂的物理与化学变化，如果想要使用数学公式来对该过程进行描述，需要工程学、力学等学科的严密推导，而这个过程往往难以进行。为了能够更加方便地模拟这些过程，就需要使用一些机器学习算法来进行拟合。由于神经网络非常适合非线性函数的拟合，因此在焊接预测过程中得到了广泛的应用。
+
+最近几年，焊接的过程控制一直在智能化方向不断发展，我们可以在焊接过程中对不同焊接工艺参数下的性能进行预测，进一步从中找到最佳的性能对应的焊接工艺参数，使用该参数获得更佳的焊缝质量。另一方面，焊接过程也在逐渐趋向完全自动化，这就需要焊接机器人能够自行捕捉焊缝区域并进行跟踪，而该过程需要通过计算机视觉技术来对目标识别和定位，这往往需要卷积神经网络的帮助。另外，焊接机械臂的控制也需要一定智能算法的辅助，传统方法大多使用的是 PID 控制器对焊接动力系统进行控制，但 PID 的控制往往无法适应焊接这一高度复杂的控制环境，因此可以通过神经网络对该控制过程进行辅助。另外，由于强化学习拥有着优秀的探索能力，并能够训练出较好的决策函数，因此强化学习也可以应用在焊接的动力以及工艺的控制过程中。但现阶段强化学习在焊接领域的应用尚少，因此强化学习在焊接控制过程的广泛应用是焊接领域发展的一大趋势。
+
+## 致谢
+
+时光荏苒，四年的大学生活转瞬而逝，值此论文完稿之际，不禁感慨万分。在这四年中，有着数不清的人给予了我帮助，我论文的完成离不开你们的支持，此时此刻，要感谢的人实在太多。
+
+我要感谢我的指导教师祝美丽老师以及同组的张兆栋老师、王红阳老师与李锦竹学长。祝老师在我的论文写作过程中对我的论文进度进行监督与指导，为我的论文提出了宝贵的意见。张老师在焊接领域有着很深的造诣，曾教授过我焊接理论知识，并在论文的写作过程中通过视频会议的方式进行不断督促，为我的论文排版等问题进行了贴心的建议。王老师不仅对焊接领域有着深入的研究，还对机器学习领域有着深入的了解，曾教授过我机器学习在焊接机器人中的应用知识，并对我的论文结构与内容进行了悉心的讲解与指导。李锦竹学长在论文工作开始之初为我的论文课题进行悉心讲解，让我能够快速把握课题的研究方法，并让我了解到机器学习中常用的浅层神经网络与优化方法，并对我的论文结构进行了悉心修正。
+
+我要感谢为我深度学习以及机器学习启蒙的吴恩达老师与李宏毅老师。吴恩达老师的深度学习课程深入浅出、浅显易懂，为我的深度学习理论打下了坚实的基础，让我对深度学习以及人工智能有了全新的认识，使我更加明确了自己未来的研究方向。李宏毅老师的课程诙谐幽默且与时俱进，通过有趣的例子为我讲解了深度学习与机器学习算法理论，并使我了解到最前沿的深度学习研究。
+
+我要感谢材料科学与工程学院的各位曾教授过我的老师，各位老师的传道授业使我能够对材料科学有着一个较为全面的了解，让我能够顺利完成这四年的本科学业。我要感谢计算机科学学院各位曾教授过我的老师，是各位老师的耐心讲解使我对计算机底层技术有着深入的了解与兴趣，并让我能够对计算机程序设计有着更好的把握。我要感谢创新创业学院的刘胜蓝老师与刘洋老师，两位老师对我的深度学习以及计算机视觉的学习给予了肯定，让我更加坚定了自己深入深度学习研究的决心。
+
+我要感谢我的室友陈威、许佳晨、王范旭，你们让我渡过了愉快的大学四年时光，并对我的学习不断提供鼓励。我要感谢我的 gay 友 @Ainavo，在我的论文写作期间不断为我开导与鼓励，在精神上给予我了最大的支持。
+
+我要感谢我的家人，在我的大学四年生活中为我默默支持与付出，并为我提供了良好的学习环境。在我论文的写作过程中对我无微不至的关怀与照顾，让我能够专心进行论文的写作。
+
+最后，我想用“因为热爱，所以期待”来为这四年的本科生活进行总结，期望今后的研究道路能够像之前一样充满动力，同时也企盼人工智能技术能够不断突破桎梏，为人类社会赋能。
 
 # Refs
 

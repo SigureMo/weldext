@@ -1,6 +1,6 @@
 # 通过表示、预测和控制学习进行智能激光焊接：一种基于深度学习和强化学习的体系
 
-> 原文：<a href="https://www.sciencedirect.com/science/article/abs/pii/S0957415815001555">Intelligent laser welding through representation, prediction, and control learning: An architecture with deep neural networks and reinforcement learning</a>
+> 原文：[Intelligent laser welding through representation, prediction, and control learning: An architecture with deep neural networks and reinforcement learning](https://www.sciencedirect.com/science/article/abs/pii/S0957415815001555)
 
 ## 摘要
 

@@ -2,21 +2,21 @@
 
 ## 摘要
 
-由于焊接过程是一个广泛使用但却极为复杂的工业过程，本文通过了解国内外神经网络在各个焊接过程中的应用情况，结合当前神经网络在机器学习以及深度学习中的发展情况，对现阶段神经网络在焊接中的研究及应用状况进行分析，并提出神经网络在焊接过程中的新的应用方向与发展方向。本文对焊接过程中各种可采集到的传感信息进行分析，并发掘可以利用神经网络的过程。
+由于焊接过程是一个广泛使用但却极为复杂的工业过程，本文通过了解国内外神经网络在各个焊接过程中的应用情况，结合当前神经网络在机器学习以及深度学习中的发展情况，对现阶段神经网络在焊接中的研究及应用状况进行分析，并提出神经网络在焊接过程中的新的应用方向与发展方向。
 
-鉴于焊接过程充满各种干扰信号，使得传感信号的采集受到极大的干扰，而神经网络有着极强的鲁棒性，能够接受在一定范围内的干扰因素，因此大多数过程利用神经网络进行预测或者控制会是更好的选择。当前国内外已经有很多研究利用神经网络对焊接结构以及性能进行预测，都取得了不错的效果，但大多数使用的方式都是浅层的神经网络，少有使用深层神经网络对焊接过程进行预测，而近年来卷积神经网络已经在深度学习中取得了重大突破，在某些特定任务上甚至超过了人类的水平，因此使用卷积神经网络等深层神经网络对环境信息进行提取是焊接预测的一个发展趋势。
+鉴于焊接过程充满各种干扰信号，会极大地干扰传感信息的采集，采用拥有较高鲁棒性的神经网络对焊接过程进行预测或者控制会是比较好的选择。当前国内外已经有很多研究利用神经网络对焊接结构以及性能进行预测，且取得了不错的效果，但大多数使用的方式都是浅层的神经网络，少有使用深层神经网络对焊接过程进行预测，而近年来卷积神经网络已经在深度学习中取得了重大突破，因此使用卷积神经网络等深层神经网络对环境信息进行提取是焊接预测的一个发展趋势。
 
-现阶段焊接的动力控制大多采用的是 PID 控制器，鲜有强化学习的应用，而强化学习也是近年来机器学习研究的一个热点方向，它非常适合与环境交互时不断进行学习，常用在机器人控制训练等连续决策任务中，因此强化学习在焊接领域的应用也将会是焊接控制的一个发展的必然趋势。
+现阶段焊接的动力控制大多采用的是 PID 控制器，鲜有强化学习的应用，而强化学习也是近年来机器学习研究的一个热点方向，它非常适合与环境交互时不断进行学习，常用在机器人控制训练等连续决策任务中，因此强化学习将来也会在焊接领域得到广泛的应用。
 
 关键词：机器学习; 焊接控制; 神经网络; 强化学习
 
 ## Abstract
 
-Welding process is a widely used but complex industrial process. In this work, I understand the current situation of neural networks in various welding processes at home and abroad, combined with the current development of neural networks in machine learning and deep learning. The research and application status of the network in welding is analyzed, and the new application direction and development direction of the neural network in the welding process are proposed. This paper analyzes the various sensory information that can be collected during the welding process, and explores the process that can use neural networks.
+Welding process is a widely used but complex industrial process. In this work, I understand the current situation of neural networks in various welding processes at home and abroad, combined with the current development of neural networks in machine learning and deep learning. The research and application status of the network in welding is analyzed, and the new application direction and development direction of the neural network in the welding process are proposed.
 
-In view of the fact that the welding process is full of various interference signals, the collection of sensor signals is greatly disturbed, and the neural network is extremely robust and can accept interference factors within a certain range, so most processes are performed using neural networks Forecasting or controlling would be a better choice. At present, there are many studies at home and abroad that use neural networks to predict the welding structure and performance, and have achieved good results, but most of the methods used are shallow neural networks, and few use deep neural networks to predict the welding process. In recent years, convolutional neural networks have made major breakthroughs in deep learning, and even exceeded the level of humans in certain specific tasks. Therefore, the use of deep neural networks such as convolutional neural networks to extract environmental information is a development trend of welding prediction.
+In view of the fact that the welding process is full of various interference signals, which will greatly interfere with the collection of sensing information, it is a better choice to predict or control the welding process using a neural network with high robustness. At present, there are many studies at home and abroad that use neural networks to predict welding structure and performance, and have achieved good results, but most of the methods used are shallow neural networks, and few use deep neural networks to predict the welding process In recent years, convolutional neural networks have made major breakthroughs in deep learning, so the use of deep neural networks such as convolutional neural networks to extract environmental information is a development trend in welding prediction.
 
-At present, most of the power control of welding uses PID controllers, and there are few applications of reinforcement learning. Reinforcement learning is also a hot spot in machine learning research in recent years. It is very suitable for continuous learning when interacting with the environment. It is commonly used in robot control. In continuous decision-making tasks such as training, the application of reinforcement learning in the field of welding will also be an inevitable trend in the development of welding control.
+At present, most of the power control of welding uses PID controllers, and there are few applications of reinforcement learning. Reinforcement learning is also a hot spot in machine learning research in recent years. It is very suitable for continuous learning when interacting with the environment. In continuous decision-making tasks such as training, reinforcement learning will also be widely used in the field of welding in the future.
 
 Keywords: Machine Learning; Welding Control; Neural Networks; Reinforcement Learning
 
@@ -68,7 +68,7 @@ M-P 神经元具有简洁且且高效的运算方式，这使得现在大多数�
 
 ![Figure 1.4](../_media/paper/Figure1.4.png)
 
-图 1.4 Flexible Transmitter 结构
+图 1.4 Flexible Transmitter 结构[7]
 
 ### 1.2 神经网络的优化方法
 
@@ -132,7 +132,7 @@ BP 优化算法虽然能够非常有效地降低网络误差，但是它只是�
 
 ![Figure 1.8](../_media/paper/Figure1.8.png)
 
-图 1.8 LeNet-5 网络结构
+图 1.8 LeNet-5 网络结构[18]
 
 LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非常相似，它主要主要包含卷积层与池化层。卷积层是对图片上局部像素值进行加权求和，建立一个局部感受野，降低网络参数量。如图 1.9 所示，卷积核扫描过图片时对图片相应位置进行加权求和，将所得值作为输出“图片”相应位置的值，之后通过卷积核不断移动，扫描得到完整的输出“图片”。输出的“图片”称为特征映射（feature map），经过卷积后的 feature map 表示了更复杂的特征[19]。而池化层是对图片进行下采样，降低图片的大小，从而在减少数据量的同时尽可能地保留有用的信息[5]。
 
@@ -146,13 +146,13 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 ![Figure 1.10](../_media/paper/Figure1.10.png)
 
-图 1.10 ResNet 中的残差块结构
+图 1.10 ResNet 中的残差块结构[15]
 
 最近两年的卷积神经网络结构研究一方面在逐渐倾向于轻量化，以适应移动设备以及嵌入性设备，典型的神经网络有 MobileNet[31] 系列。另一方面，卷积神经网络在结构的设计中尝试使用神经网络来设计，比如 Google Brain 的 NASNet 采用了强化学习来对神经网络结构进行搜索[32]。另外，Google 的 EfficientNet 研究表明卷积神经网络的深度、宽度以及分辨率有着较高的相关性，想要设计较好的神经网络结构，需要对这三个参数进行准确的调控[33]。何恺明等人最近提出的 RegNet 并不专注于设计单个网络实例，而是对网络设计空间进行整体估计，获得最优深度神经结构[34]。
 
 ![Figure 1.11](../_media/paper/Figure1.11.png)
 
-图 1.11 RegNet 中对网络设计空间的搜索过程
+图 1.11 RegNet 中对网络设计空间的搜索过程[34]
 
 神经网络的研究极大地推动了计算机视觉的发展，它使得原来很多不可能的任务成为了现实，如今神经网络已经在很多任务上达到甚至超越人类的表现，这让我们看到了深度学习研究的无限可能。
 
@@ -192,7 +192,7 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 随机森林算法也是一种机器学习任务中的常用方法。随机森林算法是一个包含多个决策树的分类器，并且其输出的类别是由个别树输出的类别的众数而定。它对多种数据都能较好地进行分类，但是在类别特别多时它的表现并不会太好。Zhifen Zhang 等人首先使用 PCA 算法对数据进行降维处理，之后使用 RF 进行分类，有效地对焊缝缺陷种类进行预测[44]。Haixing Zhu 等人首先利用 CNN 对熔池图片进行降维，之后使用 RF 进行了有效的分类[45]。
 
-### 2.2 神经网络在焊接结构分析中的应用现状
+### 2.2 神经网络在焊接结构及性能预测中的应用现状
 
 焊接接头的结构能够直接影响焊接件的性能，间接地反映了焊接质量，因此如果能够根据焊接时所使用的工艺参数来对焊接熔宽进行预测，那么就能实时判断焊接质量，进而调整焊接参数以达到焊接过程的监控。但由于焊接过程涉及多种复杂因素，很难人工推导出对焊接结果的预测公式，因此常需要机器学习技术对已有数据进行拟合，获得较为准确的预测模型。其中最有效的方法是神经网络，它在非线性、多变量复杂的预测问题都取得了比较好的效果[46]。
 
@@ -206,13 +206,13 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 ![Figure 2.2](../_media/paper/Figure2.2.jpg)
 
-图 2.2 BP-GA 神经网络权值阈值优化流程
+图 2.2 BP-GA 神经网络权值阈值优化流程[51]
 
 此外，无监督预训练也能够显著提高神经网络的性能。稀疏自编码器（sparse auto encoder，SAE）是自编码器的一种变体，它对参数添加了一个惩罚项，使得被激活的神经元限制数量限制在一个较低的值，换言之，网络会学习到较为稀疏的表示，而稀疏的表示能够在编码时更加有效地对数据进行降维。堆叠稀疏自编码器（stacked sparse auto encoder，SSAE）是由稀疏自编码器堆叠而成的，它相比于堆叠自编码器拥有更好的降维效果，可以学习到更有用的特征。Yanxi Zhang 等人利用 SSAE 对焊接状态进行预测，之后使用 GA 进行超参数搜索，取得了一定的效果，并将该方法称为 SSAE-GA 方法[53]。
 
 ![Figure 2.3](../_media/paper/Figure2.3.png)
 
-图 2.3 SSAE-GA 对神经网络的优化流程
+图 2.3 SSAE-GA 对神经网络的优化流程[53]
 
 与 SAE 相似，还有一种相似的自编码器被称为降噪自编码器（denoising auto encoder），堆叠后的结构即 SDAE，SDAE 能够从包含噪声的数据中还原数据，因此有着更强的鲁棒性。Johannes Gunther 等人在图像特征提取过程中使用了 SDAE，并使用提取出的特征进行了 SVM 分类测试，仅产生了较低的分类误差。这些提取出的特征用于后续焊接控制神经网络的输入，取得了较好的控制效果[54]。
 
@@ -226,7 +226,7 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 ![Figure 2.4](../_media/paper/Figure2.4.png)
 
-图 2.4 可视化卷积神经网络各层所提取的特征
+图 2.4 可视化卷积神经网络各层所提取的特征[19]
 
 近几年有很多利用卷积神经网络进行熔透预测的相关研究，其本质上也是低层网络从熔池图像中提取出有用的特征，交由高层预测模块进行预测。李海超等人使用卷积神经网络对熔透状态进行了预测，并对卷积层的特征映射进行了可视化，对熔透预测模型的依据进行了一定的解释。刘新锋利用基于 ImageNet 预训练的 AlexNet，对穿孔状态及熔透状态进行预测，取得了较高的准确率[56]。
 
@@ -234,7 +234,7 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 ![Figure 2.5](../_media/paper/Figure2.5.png)
 
-图 2.5 熔池状态识别的卷积神经网络结构
+图 2.5 熔池状态识别的卷积神经网络结构[57]
 
 #### 2.2.3 卷积神经网络焊接缺陷识别研究
 
@@ -242,19 +242,19 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 近年来很多研究人员提出了基于神经网络的焊接缺陷检测方法，但大多数仍然需要先使用图像处理从图像中对主要特征进行提取，然后使用浅层神经网络来对缺陷进行识别与定位。而最新的计算机视觉技术使用的卷积神经网络有着强大的特征提取能力，可以极大地精简图像预处理技术，并取得更好的效果。杨志超等人直接将预处理后的焊缝 RT 图像作为输入，传入卷积神经网络进行处理，最终输出焊缝的缺陷种类，实验结果的识别率与泛化能力都非常良好，能够对焊缝缺陷种类以及质量进行良好的划分[59]。刘梦溪等人采用深度置信网络来尝试对焊缝缺陷进行分类识别，相比于传统 BP 神经网络以及 SVM 有着更高的精度，而且当网络深度越深时，网络效果往往越好[60]。此外，刘梦溪等人还尝试采用卷积神经网络来对 X 射线焊缝来进行识别，基于 CUDA-CONVNET 提出了一种新的 CNN 结构，缺陷识别率达到了 93.26%[61]。Hou 等人采用了卷积神经网络从 X 射线图像中提取高层次特征，在训练数据的采集过程中使用了三种重采样方法，最终识别准确率达到了 97.2%[62]。黄旭丰采用生成对抗网络对焊接缺陷样本进行数据增强，使用 MobileNet 网络对焊接缺陷进行分类，并采用迁移学习策略提高模型的收敛速度与泛化能力，使用 YOLO 算法对焊缝缺陷位置进行定位，取得了非常高的检测效率与精度[63]。
 
-### 2.3 神经网络在焊接性能预测的应用现状
+#### 2.2.4 神经网络焊接性能预测研究
 
 焊接的性能直接反映了焊接的质量，如果能根据焊接时的焊接工艺参数等焊接实时信息对焊接性能进行预测，能够更有针对性地提出优化焊接过程参数以及相应的控制方法，也就达到了焊接的在线监控的效果。张永志等人利用广义动态模糊神经网络来对不同厚度、不同工艺条件下的 TC4 钛合金 TIG 抗拉强度、抗弯强度、焊缝硬度、热影响区等力学性能进行较为准确的预测[64]。刘政军等人提出利用双重人工神经网络来对铝合金焊接强度系数进行预测，该模型能够较好地对焊接工艺参数、接头力学性能与显微组织结构之间的关系进行拟合，最终计算结果与物理测试数据基本一致[65]。刘立鹏等人利用 BP-GA 算法优化神经网络，对焊接接头力学性能进行预测，并达到了预期的精度要求[66]。张昭等人在搅拌摩擦焊过程中使用 BP 神经网络成功地通过搅拌头旋转速度、焊接速度、距离焊接中心距离等参数预测了焊接接头硬度，且测试结果表明 BP 人工神经网络能够很好地预测接头硬度，为焊接接头力学性能预测提供了新方法[67]。
 
 另一方面，如果通过焊接后测量的焊缝尺寸参数来预测焊缝性能虽然无法直接对焊接参数进行调整，但它可以作为一个预测模块来使用，在前驱预测模块通过焊接工艺参数预测得到焊接接头结构时，进一步通过该模块获得焊接性能，以辅助更加精确地反向参数调控。同时，这也对焊接性能研究起到了重要的作用。阮德重等人考虑到时效强化后焊接接头的抗拉强度与焊缝的形状密切相关[68]，尝试通过焊缝形状参数来预测和控制接头的力学性能，使用了 RBF 神经网络对接头焊缝形状与其对应的焊接接头的抗拉强度等参数进行预测，精度大幅提高[69]。
 
-### 2.4 神经网络在焊接过程控制中的应用现状
+### 2.3 神经网络在焊接过程控制中的应用现状
 
 焊接的工艺控制目标是获得较好的焊缝质量，一方面可以通过焊接接头的力学性能能够直接反映焊缝质量，另一方面可以通过焊缝的尺寸来间接反映焊缝质量，而这两者我们可以通过焊缝结构分析与焊缝性能预测获得。因此，一种简单的控制方式就是，在焊接机器人的工作过程中引入实时地预测焊接质量，并搜索到最佳质量所对应的焊接参数，并进行焊接。这一方面已经有很多相关研究，而且前面所述的结构分析与性能预测算法也可以直接应用。张抱日等人利用 BP 神经网络建立了焊接高度与电弧电压的对应关系模型，并进一步实现了焊接高度的自动控制[70]。
 
 焊接的完全自动化需要焊接机器人自行跟踪焊缝并进行精准地焊接，而在这个过程中，焊接偏差的大小也会直接决定着焊接质量的高低。由于焊接是一个高度自由的动态过程，机器人动力学结构上高度相关与耦合，难以直接建立精确的机械臂动力学模型，另一方面焊接过程存在大量的不确定的扰动，这些都会对焊接控制产生不可忽略的误差，因此焊接过程的动力学控制也是一个重要的研究课题。
 
-#### 2.4.1 神经网络在焊缝跟踪过程的应用
+#### 2.3.1 神经网络在焊缝跟踪过程的应用
 
 焊接的动力学控制的关键是使得机器人能够对焊缝进行跟踪，这需要通过传感器获得视觉等信号来引导机器人姿势以自动调整焊缝的位置，然后从起始点开始对焊缝进行自动跟踪的控制。其中所使用的传感信号包含了焊接过程中的坡口与焊炬的图像信息以及焊接过程所产生的光、热、电、磁、声等物理信号。这些信号通过图像处理技术以及控制算法的处理得到焊缝的中心位置以及焊枪的调整方向。
 
@@ -266,9 +266,9 @@ LeNet-5 的网络结构已经与现在人们常用的卷积神经网络结构非
 
 ![Figure 2.7](../_media/paper/Figure2.7.png)
 
-图 2.7 串联焊接工业机器人
+图 2.7 RBF 神经网络结构[74]
 
-#### 2.4.2 深度强化学习在焊接控制中的应用
+#### 2.3.2 深度强化学习在焊接控制中的应用
 
 现阶段传统的机器人控制算法大多使用的是传统的路径规划算法，但这些算法只能应用在特定的某些场景，缺乏灵活性，而且需要对环境进行精确的建模，在复杂的工业环境下并不能很好地适用。强化学习能够在与环境的交互过程中进行学习，已经在机器人的控制过程中得到应用广泛。因此，如果将强化学习应用在焊接机器人的控制过程中将会取得更佳的控制效果，降低算法的复杂度与错误率。
 
@@ -278,7 +278,7 @@ Q-learning 在网络更新的时候采用了 off-policy 的策略，它在计算
 
 ![Figure 2.8](../_media/paper/Figure2.8.png)
 
-图 2.8 基于 SARSA 的机械臂轨迹跟踪控制系统方案
+图 2.8 基于 SARSA 的机械臂轨迹跟踪控制系统方案[76]
 
 Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强化学习算法，它采用一个 Actor 来学习用来生成行为的策略，以及一个 Critic 来评估算法的性能，以降低对学习算法更新时的方差。Actor 与 Critic 的协同工作使得算法能够有效的进行，同时两者相互促进，使得有着更高的准确率。Johannes Gunther 等人在焊接过程中使用 Actor-Critic 算法结合 Nexting 算法来实时控制焊接的功率，并使用激光焊接模拟器进行了多次初步控制演示[54]。
 
@@ -288,19 +288,33 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 
 随着人工智能技术的不断发展，焊接领域的智能化与自动化也逐渐加深。但由于大多数较为先进的技术均为近些年刚刚提出，在焊接领域中应用尚不广泛，因此焊接领域中所使用的控制与预测技术大多滞后于前沿的人工智能研究。因此，未来焊接领域将会结合较新的智能化技术，以达到更高的智能化水准，实现焊接的高度自动化。
 
-这几年的人工智能研究大多聚焦于深度学习，而深度学习的核心就是神经网络。虽然近年来神经网络在焊接的预测与控制中已经得到了较为广泛的应用，但大多数的应用仅限于较为简单的任务，只需要浅层神经网络即可完成。而在复杂的控制过程大多使用的是一些传统的算法，少有利用深层神经网络的相关研究。近年来深度学习的发展使得神经网络的拟合能力大大提高，很多大型复杂任务可以通过神经网络端到端解决，因此在一些复杂任务上运用深层神经网络是焊接领域的发展趋势。
+### 3.1 神经网络在焊接过程预测中的发展趋势
+
+这几年的人工智能研究大多聚焦于深度学习，而深度学习的核心就是神经网络。虽然近年来神经网络在焊接的预测与控制中已经得到了较为广泛的应用，但大多数的应用仅限于较为简单的任务，只需要浅层神经网络即可完成。而在复杂的预测过程大多使用的是一些传统的算法，少有利用深层神经网络的相关研究。近年来深度学习的发展使得神经网络的拟合能力大大提高，很多大型复杂任务可以通过神经网络端到端解决，因此在一些复杂任务上运用深层神经网络是焊接领域的发展趋势。
 
 ![Figure 3.1](../_media/paper/Figure3.1.svg)
 
-图 3.1 焊接过程中所涉及的主要状态信息
+图 3.1 焊接过程预测相关状态信息
 
-图 3.1 展示了焊接过程中主要的状态信息，各个状态紧密连接，但各个连接中又充斥着复杂的变化过程，很难使用简单的数学公式来进行拟合。国内外现阶段在线预测的主要研究方向聚焦于通过熔池图像提取熔池形貌参数、通过焊接工艺参数来预测焊缝的尺寸以及缺陷检测任务。其中熔池图像研究通常使用阈值分割、边缘检测算子、数学形态学的方式处理，而对于图像数据，卷积神经网络有着高度并行运算且高性能的识别效果，能够明显提高熔池图像提取效果，虽然国内外的相关研究尚少，但随着智能化研究进程的推进，卷积神经网络在熔池图像处理中将会得到广泛应用。神经网络已经广泛应用于通过焊接工艺参数来预测焊缝尺寸的过程中，由于该过程涉及到的参数量较少，一般浅层神经网络已经能够很好地完成该任务。另外，为了进一步提高神经网络的准确率，算法的优化过程大多使用遗传算法或者同时使用遗传算法与 BP 算法，国内的相关研究已经非常成熟。缺陷检测一般情况下的输入数据也是图片，而且现阶段卷积神经网络在目标分类以及目标定位任务上已经取得了突破性的成果，缺陷检测的任务非常适合使用卷积神经网络来处理。近年来，缺陷检测的任务也逐步使用卷积神经网络进行端到端训练来替换繁琐的图片处理和浅层神经网络结合的方式，因此深度神经网络在焊接中的应用是未来的大势所趋。
+图 3.1 展示了焊接过程预测中主要的状态信息，各个状态紧密连接，但各个连接中又充斥着复杂的变化过程，很难使用简单的数学公式来进行拟合。国内外现阶段在线预测的主要研究方向聚焦于通过熔池图像提取熔池形貌参数、通过焊接工艺参数来预测焊缝的尺寸以及缺陷检测任务。
 
-由于焊缝尺寸与接头力学性能之间的关系也是一个比较难以直接推导的过程，因此在该过程中使用神经网络进行拟合也是非常普遍的。该过程所涉及的参数也比较少，因此一般浅层神经网络已经能够较好地完成该任务。另外也有一些研究直接通过焊接参数或者环境图像来预测接头力学性能，这些都可以通过神经网络来完成，方法与焊接结构的预测大抵相同。
+神经网络已经广泛应用于通过焊接工艺参数来预测焊缝尺寸的过程中，由于该过程涉及到的参数量较少，一般浅层神经网络已经能够很好地完成该任务。另外，为了进一步提高神经网络的准确率，算法的优化过程大多使用遗传算法或者同时使用遗传算法与 BP 算法，国内的相关研究已经非常成熟。
 
-在焊接的工艺控制过程中，一些研究使用的是通过工艺参数来预测焊缝尺寸或者焊接接头的力学性能，这些可以采用上述焊接结构以及性能的预测方法，进而反向搜索在最佳焊接质量下所需要的工艺参数。该方法简单直观，但由于有着较为复杂的搜索过程，因此性能一般不高。
+现阶段常用的熔池图像处理手段有阈值分割、边缘检测算子、数学形态学等方式，这些方式往往繁杂且精度较低，识别效果一般。而在近年来的深度学习研究中，图像识别与检测技术大多使用的是卷积神经网络，它拥有极高的识别性能，在很多任务上已经超过了人类的水平。而且它可以高度并行化地处理数据，使得识别速度更快，明显提高了熔池图像提取的效果。现阶段国内外少有使用卷积神经网络直接对熔池图像进行提取的研究，因此使用卷积神经网络在熔池图像提取应用中将会逐渐取代传统算法。
 
-而在焊接的动力控制过程中，现阶段大多使用的是传统的 PID 控制器方法，通过闭环控制来达到机械臂的动力平衡。而近年来深度学习使强化学习的学习能力再次提高，能够应对高复杂度场景以及高复杂度的决策问题。另外，强化学习可以更加直接地给出在给定情形下所应采取的行为，且运算效率更高，因此该算法可以显著提高控制过程中的不稳定性。近年来强化学习在焊接过程中的研究非常少，有些研究是在 PID 的控制中加入强化学习辅助控制过程，提高了控制的稳定性[64]。另外，强化学习不仅可以应用在焊接动力控制过程中，只要设计合适的奖励函数，就可以应用在任何合适的任务上，因此焊接工艺参数的选取也可以通过强化学习来学习[54]，国内外该方法的相关研究更是少之又少，因此强化学习的广泛应用将会是焊接过程控制研究中的一大趋势。
+缺陷检测也是焊接过程中研究的热门方向，传统方法大多也是使用简单的机器学习算法。但由于它多数情况下它的输入数据也是图片，数据处理难度也是非常之高。现阶段卷积神经网络在目标分类以及目标定位任务上也已经取得了突破性的成果，缺陷检测的任务非常适合使用卷积神经网络来处理。近年来，缺陷检测的任务也逐步使用卷积神经网络进行端到端训练来替换繁琐的图片处理和浅层神经网络结合的方式，因此深度神经网络在焊接中的应用是未来的大势所趋。
+
+由于焊缝尺寸与接头力学性能之间的关系也是一个比较难以直接推导的过程，因此在该过程中使用神经网络进行拟合也是非常普遍的。该过程所涉及的参数也比较少，因此一般浅层神经网络已经能够较好地完成该任务。另外也有一些研究直接通过焊接参数或者环境图像来预测接头力学性能，这些都可以通过神经网络来完成。
+
+### 3.2 神经网络在焊接过程控制中的发展趋势
+
+![Figure 3.2](../_media/paper/Figure3.2.svg)
+
+图 3.2 焊接过程控制主要流程
+
+而在焊接的动力控制过程中，现阶段大多使用的是传统的 PID 控制器方法，通过闭环控制来达到机械臂的动力平衡。而近年来深度学习使强化学习的学习能力再次提高，能够应对高复杂度场景以及高复杂度的决策问题。另外，强化学习可以更加直接地给出在给定情形下所应采取的行为，且运算效率更高，因此该算法可以显著提高控制过程中的不稳定性。近年来强化学习在焊接过程中的研究非常少，有些研究是在 PID 的控制中加入强化学习辅助控制过程，提高了控制的稳定性[64]。
+
+在焊接的工艺控制过程中，一些研究使用的是通过工艺参数来预测焊缝尺寸或者焊接接头的力学性能，这些可以采用上述焊接结构以及性能的预测方法，进而反向搜索在最佳焊接质量下所需要的工艺参数。该方法简单直观，但由于有着较为复杂的搜索过程，因此性能一般不高。而强化学习不仅可以应用在焊接动力控制过程中，只要设计合适的奖励函数，就可以应用在任何合适的任务上。在焊接的工艺控制中，目标是获得较好的焊缝质量，它可以作为强化学习中所使用的奖励值，而工艺参数的设置就可以当作是强化学习中所选取的动作选项，所以焊接工艺控制也非常适合使用强化学习来进行[54]。国内外该方法的相关研究更是少之又少，因此强化学习的广泛应用将会是焊接过程控制研究中的一大趋势。
 
 ## 结论
 
@@ -314,17 +328,16 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 
 时光荏苒，四年的大学生活转瞬而逝，值此论文完稿之际，不禁感慨万分。在这四年中，有着数不清的人给予了我帮助，我论文的完成离不开你们的支持，此时此刻，要感谢的人实在太多。
 
-我要感谢我的指导教师祝美丽老师以及同组的张兆栋老师、王红阳老师与李锦竹学长。祝老师在我的论文写作过程中对我的论文进度进行监督与指导，为我的论文提出了宝贵的意见。张老师在焊接领域有着很深的造诣，曾教授过我焊接理论知识，并在论文的写作过程中通过视频会议的方式进行不断督促，为我的论文排版等问题进行了贴心的建议。王老师不仅对焊接领域有着深入的研究，还对机器学习领域有着深入的了解，曾教授过我机器学习在焊接机器人中的应用知识，并对我的论文结构与内容进行了悉心的讲解与指导。李锦竹学长在论文工作开始之初为我的论文课题进行悉心讲解，让我能够快速把握课题的研究方法，并让我了解到机器学习中常用的浅层神经网络与优化方法，并对我的论文结构进行了悉心修正。
+我要感谢我的指导教师祝美丽老师以及同组的张兆栋老师、王红阳老师与李锦竹学长。祝老师在我的论文写作过程中对我的论文进度进行监督与指导，为我的论文提出了宝贵的意见。张老师在焊接领域有着很深的造诣，曾教授过我焊接理论知识，并在论文的写作过程中通过视频会议的方式进行不断督促，为我的论文排版等问题进行了贴心的建议。王老师不仅对焊接领域有着深入的研究，还在机器学习领域颇有建树，曾教授过我机器学习在焊接机器人中的应用知识，并对我的论文结构与内容进行了悉心的讲解与指导。李锦竹学长在论文工作开始之初为我的论文课题进行悉心讲解，让我能够快速把握课题的研究方法，并让我了解到机器学习中常用的浅层神经网络与优化方法，对我的论文结构进行了悉心修正。
 
-我要感谢为我深度学习以及机器学习启蒙的吴恩达老师与李宏毅老师。吴恩达老师的深度学习课程深入浅出、浅显易懂，为我的深度学习理论打下了坚实的基础，让我对深度学习以及人工智能有了全新的认识，使我更加明确了自己未来的研究方向。李宏毅老师的课程诙谐幽默且与时俱进，通过有趣的例子为我讲解了深度学习与机器学习算法理论，并使我了解到最前沿的深度学习研究。
+我要感谢为我深度学习以及机器学习启蒙的吴恩达老师与李宏毅老师。吴恩达老师的深度学习课程深入浅出、浅显易懂，为我的深度学习理论打下了坚实的基础，让我对人工智能有了全新的认识。李宏毅老师的课程诙谐幽默且与时俱进，通过有趣的例子为我讲解了深度学习与机器学习算法理论，并使我了解到最前沿的深度学习研究。
 
 我要感谢材料科学与工程学院的各位曾教授过我的老师，各位老师的传道授业使我能够对材料科学有着一个较为全面的了解，让我能够顺利完成这四年的本科学业。我要感谢计算机科学学院各位曾教授过我的老师，是各位老师的耐心讲解使我对计算机底层技术有着深入的了解与兴趣，并让我能够对计算机程序设计有着更好的把握。我要感谢创新创业学院的刘胜蓝老师与刘洋老师，两位老师对我的深度学习以及计算机视觉的学习给予了肯定，让我更加坚定了自己深入深度学习研究的决心。
 
-我要感谢我的室友陈威、许佳晨、王范旭，你们让我渡过了愉快的大学四年时光，并对我的学习不断提供鼓励。我要感谢我的 gay 友 @Ainavo，在我的论文写作期间不断为我开导与鼓励，在精神上给予我了最大的支持。
+我要感谢我的室友陈威、许佳晨、王范旭，你们让我渡过了愉快的大学四年时光，并对我的学习不断提供鼓励。我要感谢我的挚友张经纬，在我的论文写作期间不断为我开导与鼓励，在精神上给予我了最大的支持。
+我要感谢我的家人，在我的大学四年生活中为我默默支持与付出，为我提供了良好的学习环境。在我论文的写作过程中给予我关怀与照顾，让我能够专心进行论文的写作。
+最后，我想用“因为热爱，所以期待”来为这四年的本科学习生活画上一个句号，期望今后的学习道路能够像之前一样充满动力，同时也企盼人工智能技术能够不断突破桎梏，为人类社会赋能。
 
-我要感谢我的家人，在我的大学四年生活中为我默默支持与付出，并为我提供了良好的学习环境。在我论文的写作过程中对我无微不至的关怀与照顾，让我能够专心进行论文的写作。
-
-最后，我想用“因为热爱，所以期待”来为这四年的本科生活进行总结，期望今后的研究道路能够像之前一样充满动力，同时也企盼人工智能技术能够不断突破桎梏，为人类社会赋能。
 
 # Refs
 
@@ -343,9 +356,9 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 13. Vinod N, and Hinton G E. Rectified linear units improve restricted boltzmann machines[C]. Proceedings of the 27th international conference on machine learning (ICML-10), Haifa, Israel, 2010:807-814.
 14. Maas A L, Hannun A Y, Ng A Y. Rectifier nonlinearities improve neural network acoustic models[C]. In Proc. ICML2013, Atlanta, United States, 2013, 30[1]:3.
 15. He K, Zhang X, Ren S, et al. Deep residual learning for image recognition[C]. Proceedings of the IEEE conference on computer vision and pattern recognition(CVPR-2016), Las Vegas, NV, USA, 2016:770-778.
-16. Fukushima, K. Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position[J]. Biological Cybernetics.1980,36:193–202.
+16. Fukushima, K. Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position[J]. Biological Cybernetics, 1980,36:193-202.
 17. LeCun Y, Bernhard E B, John S D, et al. Handwritten Digit Recognition with a Back-Propagation Network[C]. Advances in Neural Information Processing Systems,Denver,1990:396-404.
-18. LeCun Y, Bottou L, Bengio Y, et al. Gradient-Based Learning Applied to Document Recognition[J]. Proceedings of the IEEE. 1998,86(11):2278-2324.
+18. LeCun Y, Bottou L, Bengio Y, et al. Gradient-Based Learning Applied to Document Recognition[J]. Proceedings of the IEEE, 1998,86(11):2278-2324.
 19. Zeiler M D, Fergus R. (2014, September). Visualizing and understanding convolutional networks[C]. In European conference on computer vision, Springer, Cham, 2014:818-833.
 20. Krizhevsky A, Sutskever I, Hinton G E. ImageNet classification with deep convolutional neural networks[C]. Advances in Neural Information Processing Systems, Curran Associates RedHook, NY, USA, 2012:1097-1105.
 21. Christian S, Liu W, Jia Y, et al. Going deeper with convolutions[C]. In Proceedings of the IEEE conference on computer vision and pattern recognition(CVPR-2015), Boston, MA, USA, 2015:1-9.
@@ -369,7 +382,7 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 39. Silver D, Schrittwieser J, Simonyan K, et al. Mastering the game of go without human knowledge[J]. Nature, 2017,550(7676):354-359.
 40. 裴浩东,樊丁,马跃洲,等.人工神经网络及其在焊接中的应用[J].甘肃工业大学学报,1996(1):1-6.
 41. 李航.统计学习方法[M].北京:清华大学出版社,2019.
-42. 顾盛勇. 基于视觉传感的高效深熔锁孔TIG焊焊缝识别及熔透状态的研究[D].华南理工大学,2018.
+42. 顾盛勇. 基于视觉传感的高效深熔锁孔TIG焊焊缝识别及熔透状态的研究[D].广州:华南理工大学,2018.
 43. 贺峰,史亚斌,王锋,等.基于多传感器和支持向量机的GMAW焊接过程模式识别研究[J].科技创新与应用,2018(34):1-4+7.
 44. Zhifen Zhang. Real-time seam defect identification for Al alloys in robotic arc welding using optical spectroscopy and integrating learning mechanisms in 20kw-class CO2 laser welding processes[J]. Journal of Physics D:Applied Physics, 2002, 36(2): 192.
 45. Zhu H, Ge W, Liu Z. Deep Learning-Based Classification of Weld Surface Defects[J]. Applied Sciences, 2019,9(16):1-10.
@@ -382,15 +395,15 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 52. Ding H, Wang Z, Guo Y, et al. Research on laser processing technology of instrument panel implicit weakening line based on neural network and genetic algorithm[J]. Optik,2020,203.
 53. Zhang Y, You D, Gao X, et al. Real-time monitoring of high-power disk laser welding statuses based on deep learning framework[J]. J Intell Manuf 31, 2020:799-814.
 54. Johannes G, Patrick M P, Gerhard H, et al. Intelligent laser welding through representation, prediction, and control learning: An architecture with deep neural networks and reinforcement learning[J]. Mechatronics,2016,34.
-55. Krizhevsky A，Sutskever I，Hinton GE. ImageNet classification with deep convolutional neural networks[C]. Advances in Neural Information Processing Systems, Curran Associates RedHook,NY,USA,2012:1097-1105．
-56. 刘新锋. 基于正面熔池图像和深度学习算法的PAW穿孔/熔透状态预测[D].山东大学,2017.
+55. Krizhevsky A, Sutskever I, Hinton GE. ImageNet classification with deep convolutional neural networks[C]. Advances in Neural Information Processing Systems, Curran Associates RedHook,NY,USA,2012:1097-1105．
+56. 刘新锋. 基于正面熔池图像和深度学习算法的PAW穿孔/熔透状态预测[D].济南:山东大学,2017.
 57. 覃科,刘晓刚,丁立新.基于卷积神经网络的CO2焊接熔池图像状态识别方法[J].焊接,2017(06):21-26+70.
 58. 焦敬品,李思源,常予,等. 集箱管接头内焊缝表面缺陷识别方法研究[J]. 仪器仪表学报,2017,38(12):3044-3052.
 59. 杨志超,周强,胡侃,等.基于卷积神经网络的焊接缺陷识别技术及应用[J].武汉理工大学学报(信息与管理工程版),2019,41(01):17-21.
 60. 刘梦溪,巨永锋,高炜欣,等.焊缝缺陷图像分类识别的深度置信网络研究[J].测控技术,2018,37(08):5-9.
 61. 刘梦溪,巨永锋,高炜欣,等.深度卷积神经网络的 X 射线焊缝缺陷研究[J].传感器与微系统,2018,37(05):37-39.
 62. Hou W, Wei Y, Jin Y, et al. Deep features based on a DCNN model for classifying imbalanced weld flaw types[J]. Measurement, 2019, 131:482-489.
-63. 黄旭丰. 基于深度迁移学习的焊接质量在线监测方法研究[D].广西大学,2019.
+63. 黄旭丰. 基于深度迁移学习的焊接质量在线监测方法研究[D].南宁:广西大学,2019.
 64. 张永志,董俊慧,侯继军.广义动态模糊神经网络焊接接头力学性能预测[J].焊接学报,2017,38(08):37-40+130.
 65. 刘政军,张琨,刘长军.基于双重人工神经网络模型预测焊接接头强度系数的研究[J].兵器材料科学与工程,2018,41(05):53-56.
 66. 刘立鹏,王伟,董培欣,等.基于遗传神经网络的焊接接头力学性能预测系统[J].焊接学报,2011(7):105-108.
@@ -403,5 +416,5 @@ Actor-Critic 算法是一种基于策略与基于值训练方式相结合的强�
 73. 张文辉,齐乃明,尹洪亮. 自适应神经变结构的机器人轨迹跟踪控制[J].控制与决策, 2011,26(4):597-600.
 74. 王保民,张明亮.基于RBF神经网络的弧焊机器人轨迹跟踪控制方法[J].兰州理工大学学报,2019,45(03):85-89.
 75. 李广创,程良伦.基于深度强化学习的机械臂避障路径规划研究[J].软件工程,2019,22(03):12-15.
-76. 刘卫朋. 焊接机器人焊接路径识别与自主控制方法研究及应用[D].河北工业大学,2016.
-77. 芦川. 锅炉内壁管板焊接跟踪智能焊接机器人机构设计与运动控制[D].湘潭大学,2019.
+76. 刘卫朋. 焊接机器人焊接路径识别与自主控制方法研究及应用[D].天津:河北工业大学,2016.
+77. 芦川. 锅炉内壁管板焊接跟踪智能焊接机器人机构设计与运动控制[D].湘潭:湘潭大学,2019.

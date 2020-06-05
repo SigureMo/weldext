@@ -8,7 +8,7 @@
 
 ## 首先，让我们从强化学习学起
 
-二月的最后一个星期，在这个本应正式开学的日子，却由于疫情的影响，迟迟无法返校，但毕设工作却应当正式开展了，经过张兆栋老师的悉心讲解，我们的毕设也如期开始进行。假期的最后我开了 Gomoku-AlphaZero 这个坑，用强化学习试着完成一个[五子棋 AI](https://github.com/cattidea/gomoku-alphazero)，以弥补去年 VB 课的五子棋两小时随便只做了个[基础判定逻辑](https://github.com/SigureMo/notev/tree/master/Codes/VB/06_five_in_a_row)的遗憾。这东西还是花了我一周多时间，不过这完全不影响毕设最开始的翻译工作的开展，因为我欣喜地发现，老师给的翻译居然也是强化学习相关的内容，这几天在做五子棋的同时也快速了解了 RL 相关内容，后续的翻译简直如鱼得水，根本没什么难度啦（咳，说的就像不是拿 Google Translate 翻译的似的）~
+二月的最后一个星期，在这个本应正式开学的日子，却由于疫情的影响，迟迟无法返校，但毕设工作却应当正式开展了，经过张兆栋老师的悉心讲解，我们的毕设也如期开始进行。假期的最后我开了 Gomoku-AlphaZero 这个坑，用强化学习试着完成一个[五子棋 AI](https://github.com/cattidea/gomoku-alphazero)，以弥补去年 [VB 课的五子棋](https://github.com/SigureMo/notev/tree/master/Codes/VB/06_five_in_a_row)两小时随便只做了个基础判定逻辑的遗憾。这东西还是花了我一周多时间，不过这完全不影响毕设最开始的翻译工作的开展，因为我欣喜地发现，老师给的翻译居然也是强化学习相关的内容，这几天在做五子棋的同时也快速了解了 RL 相关内容，后续的翻译简直如鱼得水，根本没什么难度啦（咳，说的就像不是拿 Google Translate 翻译的似的）~
 
 ## 让我们设想一下课题方案
 
@@ -22,7 +22,7 @@
 
 ## 闲暇之余，写点代码
 
-在空闲的时候还试着写了下 [auto-encoder](../../algorithms/auto_encoder.py)，当然也使用了 SAE 和 DAE 这样的 trick，这样如果想用的话直接调用就好啦~
+在空闲的时候还试着写了下 [auto-encoder](https://github.com/SigureMo/weldext/blob/master/algorithms/auto_encoder.py)，当然也使用了 SAE 和 DAE 这样的 trick，这样如果想用的话直接调用就好啦~
 
 四月，本应是樱花盛开的季节，然而家中停暖，显得分外凄冷。月初，老师规定的 deadline 前两天写了下文献综述，之后花了几天学习并写了个 [BP-GA 的 Pytorch 实现](https://github.com/cattidea/bp-ga-pytorch)，也是为了后续训练方便啦。
 
@@ -47,3 +47,7 @@ C           1 hr 31 mins   ▌░░░░░░░░░░░░░░░░�
 JSON        1 hr 22 mins   ▍░░░░░░░░░░░░░░░░░░░░   2.4%
 YAML        1 hr 15 mins   ▍░░░░░░░░░░░░░░░░░░░░   2.2%
 ```
+
+不过终于还是还是顺利完成了论文以及答辩，那么……
+
+再见了诶，材料学院！

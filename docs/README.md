@@ -1,6 +1,6 @@
 # Weldext
 
-> Application status and development trend analysis of neural network in welding process
+> Application Status and Development Trend Analysis of Neural Network in Welding Process
 
 <p align="center">
    <a href="https://SigureMo.github.io/weldext/" target="_blank"><img alt="Read the Docs" src="https://img.shields.io/badge/Paper-weldext-red?style=flat-square&logo=read-the-docs"></a>
